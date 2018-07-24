@@ -12,7 +12,9 @@ RUN apt-get update && \
 	qtdeclarative5-dev \
 	qtmultimedia5-dev \
 	qtquickcontrols2-5-dev \
-	qtdeclarative5-dev-tools
+	qtdeclarative5-dev-tools \
+	gstreamer1.0-qt5 \
+	gstreamer1.0-plugins-good
 
 USER build
 WORKDIR /home/build
