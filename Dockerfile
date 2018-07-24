@@ -14,7 +14,10 @@ RUN apt-get update && \
 	qtquickcontrols2-5-dev \
 	qtdeclarative5-dev-tools \
 	gstreamer1.0-qt5 \
-	gstreamer1.0-plugins-good
+	gstreamer1.0-plugins-base \
+	gstreamer1.0-plugins-good \
+	gstreamer1.0-plugins-bad \
+	gstreamer1.0-plugins-ugly
 
 USER build
 WORKDIR /home/build
