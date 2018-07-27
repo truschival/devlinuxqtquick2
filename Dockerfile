@@ -21,9 +21,7 @@ RUN apt-get update && \
         gstreamer1.0-plugins-good \
         gstreamer1.0-plugins-ugly \
         alsa-base \
-	alsa-utils \
-	python-pip \
-	python-setuptools
+	alsa-utils
 
 USER build
 WORKDIR /home/build
