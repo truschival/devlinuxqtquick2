@@ -20,7 +20,6 @@ RUN apt-get update && \
         gstreamer1.0-plugins-base-apps \
         gstreamer1.0-plugins-good \
         gstreamer1.0-plugins-ugly \
-        alsa-base \
 	alsa-utils
 
 USER build
