@@ -14,10 +14,14 @@ RUN apt-get update && \
 	qtquickcontrols2-5-dev \
 	qtdeclarative5-dev-tools \
 	gstreamer1.0-qt5 \
-	gstreamer1.0-plugins-base \
-	gstreamer1.0-plugins-good \
+	gstreamer1.0-libav \
 	gstreamer1.0-plugins-bad \
-	gstreamer1.0-plugins-ugly \
+        gstreamer1.0-plugins-base \
+        gstreamer1.0-plugins-base-apps \
+        gstreamer1.0-plugins-good \
+        gstreamer1.0-plugins-ugly \
+        alsa-base \
+	alsa-utils \
 	python-pip \
 	python-setuptools
 
