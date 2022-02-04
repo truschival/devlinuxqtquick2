@@ -1,4 +1,4 @@
-FROM ruschi/devbusterbase:latest
+FROM ghcr.io/truschival/devlinuxbase:latest
 MAINTAINER Thomas Ruschival <t.ruschival@gmail.com>
 
 # Setup language environment and encoding
