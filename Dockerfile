@@ -7,7 +7,8 @@ ENV LANG C.UTF-8
 
 RUN apt-get update && \
 	apt-get install -y \
-	qt5-default \
+	qt5-qmake \
+	qt5base-dev \ 
 	qtbase5-dev-tools \
 	qtdeclarative5-dev \
 	qtmultimedia5-dev \
