@@ -44,7 +44,13 @@ RUN python3 -m venv /home/builduser/.venv && \
         pytest \
         pytest-cov \
         requests \
-        GitPython
+        GitPython \
+        certifi \
+        frozendict \
+        python-dateutil \
+        typing_extensions \
+        "urllib3<2" && \
+    chmod -R a+rwX /home/builduser/.venv
 
 ENV PATH="/home/builduser/.venv/bin:$PATH" \
     VIRTUAL_ENV="/home/builduser/.venv"
