@@ -1,2 +1,3 @@
 # devlinuxqtquick2
-Dockerfile for QTQuick/QML development on GNU/Linux
+
+Dockerfile for QtQuick/QML and QtMultimedia development on GNU/Linux (Debian Trixie)
