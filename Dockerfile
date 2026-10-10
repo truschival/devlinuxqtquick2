@@ -7,6 +7,7 @@ ENV LC_ALL=C.UTF-8 \
     DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
         qt5-qmake \
         qtbase5-dev \
@@ -24,9 +25,25 @@ RUN apt-get update && \
         gstreamer1.0-qt5 \
         gstreamer1.0-plugins-base \
         gstreamer1.0-plugins-base-apps \
-        gstreamer1.0-plugins-good && \
+        gstreamer1.0-plugins-good \
+        libpistache-dev \
+        python3 \
+        python3-pip \
+        python3-venv && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 USER builduser
 WORKDIR /home/builduser
+
+# Create a virtual environment for builduser so pip installs work cleanly without PEP 668 errors
+RUN python3 -m venv /home/builduser/.venv && \
+    /home/builduser/.venv/bin/pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    /home/builduser/.venv/bin/pip install --no-cache-dir \
+        pytest \
+        pytest-cov \
+        requests \
+        GitPython
+
+ENV PATH="/home/builduser/.venv/bin:$PATH" \
+    VIRTUAL_ENV="/home/builduser/.venv"
